@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/tovar.css">
+    <link rel="stylesheet" href="assets/css/header-footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header >
+        <div class="headdowncont">
+          <div class="headdown">
+            <img
+              src="assets/img/logo.png"
+              alt="logo"
+              class="logo"
+              onclick="location.href='index.php'"
+            />
+            <button class="catalogbut" onclick="location.href='catalog.html'">
+              <span>Каталог</span
+              ><img src="assets/img/catalog.png" alt="catalog" />
+            </button>
+            <div class="search">
+              <input type="text" placeholder="Поиск" />
+              <img src="assets/img/Search.png" alt="searchicon" />
+            </div>
+            <nav class="headbtns">
+              <button type="button" onclick="location.href='user.php'">
+                <img src="assets/img/Profile_Circle-192x192.png" alt="profile" />
+                <span>Профиль</span>
+              </button>
+              <button type="button" onclick="location.href='cart.html'">
+                <img src="assets/img/Shopping_Card-192x192.png" alt="cart" />
+                <span>Корзина</span>
+              </button>
+              <button type="button" onclick="location.href='favorite.html'">
+                <img src="assets/img/Heart-192x192.png" alt="fav" />
+                <span>Избранное</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <div class="tovar-page">
+        <div class="product-content">
+            <div class="product-content-txt">
+                <p>Видеокарта Palit GeForce RTX 4060 Dual [NE64060019P1-1070D]</p>
+            </div>
+            <div class="product-content__card">
+                <div class="card__img">
+                    <div class="thumbnail-container">
+                        <div class="thumbnails">
+                            <img src="assets/img/400.jpg" alt="Image 1" class="thumbnail active" onclick="changeSlide(0)">
+                            <img src="assets/img/400-2.webp" alt="Image 2" class="thumbnail" onclick="changeSlide(1)">
+                            <img src="assets/img/400-3.webp" alt="Image 3" class="thumbnail" onclick="changeSlide(2)">
+                            <img src="assets/img/400-5.webp" alt="Image 4" class="thumbnail" onclick="changeSlide(3)">
+                            <img src="assets/img/400-6.webp" alt="Image 1" class="thumbnail" onclick="changeSlide(4)">
+                            <img src="assets/img/400-7.webp" alt="Image 2" class="thumbnail" onclick="changeSlide(5)">
+                            <img src="assets/img/400-8.webp" alt="Image 3" class="thumbnail" onclick="changeSlide(6)">
+                            <img src="assets/img/400-9.webp" alt="Image 4" class="thumbnail" onclick="changeSlide(7)">
+                        </div>
+                        <div class="large-image">
+                            <img src="assets/img/400.jpg" alt="Large Image" id="largeImage">
+                        </div>
+                    </div>
+                </div>
+                <div class="characteristics">
+                    <div class="characteristics-text">
+                        <p>Графический процессор: </p>
+                        <p>GeForce RTX 4060</p>
+                    </div>
+                    <div class="characteristics-text">
+                        <p>Частота:  </p>
+                        <p>1860МГц</p>
+                    </div>
+                    <div class="characteristics-text">
+                        <p>Объем видеопамяти: </p>
+                        <p>8 ГБ</p>
+                    </div>
+                    <div class="characteristics-text">
+                        <p>Разрядность шины памяти: </p>
+                        <p>128 ГБ</p>
+                    </div>
+                    <div class="characteristics-text">
+                        <p>Интерфейс подключения: </p>
+                        <p> PCIe 4.0</p>
+                    </div>
+                    <div class="characteristics-text">
+                        <p>Количество линий PCI Express: </p>
+                        <p>8</p>
+                    </div>
+                    <div class="characteristics-text">
+                        <p>Разъемы дополнительного питания: </p>
+                        <p>8 pin</p>
+                    </div>
+                    <div class="characteristics-text" style="margin-top: 6px;">
+                        <a href="#reviews" style="color: #FF0000;">Все характеристики:</a>
+                    </div>
+                </div>
+                <div class="card__buy">
+                    <p>42 799 ₽</p>
+                    <a href="#">Нашли дешевле?</a>
+                    <div  class="card__buy-text-img">
+                        <img src="assets/img/Check_ring.png" alt="">
+                        <p>В наличии : 12шт</p>
+                    </div>
+                    <div style="display: flex;"> <!--чтобы card-grade не был во всю ширину-->
+                        <div class="card-grade">
+                            <img src="assets/img/star.png" alt="">
+                            <img src="assets/img/star.png" alt="">
+                            <img src="assets/img/star.png" alt="">
+                            <img src="assets/img/star.png" alt="">
+                            <img src="assets/img/star.png" alt="">
+                            <div class="card-grade__txt">1 отзыв</div>
+                        </div>
+                    </div>
+                    <div style="display: flex;"> <!--чтобы card-grade не был во всю ширину-->
+                        <div class="card-grade">
+                            <img src="assets/img/car.png" alt="">
+                            <div class="card-grade__txt" style="font-weight: 500;">Доставим к вам за 2 часа</div>
+                        </div>
+                    </div>
+                    <button class="buy">
+                        <p>Купить</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description-reviews">
+        <div class="tab">
+            <button class="tablinks" onclick="location.href='#description'">Описание</button>
+            <button class="tablinks" onclick="location.href='#reviews'">Характеристики</button>
+          </div>
+          <hr>
+          <div class="description" id="description">
+            <p>Видеокарта Palit GeForce RTX 4060 DUAL [NE64060019P1-1070D] ориентирована на игровые системы и рабочие станции. Благодаря микроархитектуре Ada Lovelace и 8 ГБ памяти стандарта GDDR6 она обеспечивает производительность, скорость и плавность при обработке графических данных. Процессор работает на частоте 1830 МГц, которая способна увеличиваться в режиме разгона до показателя 2460 МГц.
+                <br>Система охлаждения с двумя вентиляторами, радиатором и тепловыми трубками отводит тепло и поддерживает низкую температуру нагрева видеокарты Palit GeForce RTX 4060 DUAL [NE64060019P1-1070D]. Технология 0-dB Tech останавливает вращение крыльчатки в режиме низкой нагрузки, что делает работу графического адаптера бесшумной. На верхней стороне кожуха есть полоса с подсветкой RGB. С помощью программного обеспечения ThunderMaster можно настраивать параметры производительности и контролировать состояние системы.</p>
+          </div>
+          <div class="reviews">
+            <div class="txt">
+                <p>Характеристики</p>
+            </div>
+            <div class="content" id="reviews">
+                <div class="mini-block">
+                    <p style="margin-bottom: 5px; font-weight: 600;">Заводские настройки</p>
+                    <div class="mini-block-text">
+                        <p>Тип: </p>
+                        <p>Видеокарта</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Модель: </p>
+                        <p>Palit GeForce RTX 4060 Dual</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Код производителя: </p>
+                        <p>[NE64060019P1-1070D]</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Цвет: </p>
+                        <p>Чёрный</p>
+                    </div>
+                </div>
+                <div class="mini-block">
+                    <p style="margin-bottom: 5px; font-weight: 600;">Заводские настройки</p>
+                    <div class="mini-block-text">
+                        <p>Графический процессор: </p>
+                        <p>GeForce RTX 4060</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Микроархитектура: </p>
+                        <p>NVIDIA Ada Lovelace</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Техпроцесс: </p>
+                        <p>5 нм</p>
+                    </div>
+                    
+                </div>
+                <div class="mini-block">
+                    <p style="margin-bottom: 5px; font-weight: 600;">Заводские настройки</p>
+                    <div class="mini-block-text">
+                        <p>Объем видеопамяти: </p>
+                        <p>8 ГБ</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Тип памяти:</p>
+                        <p>GDDR6</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Разрядность шины памяти: </p>
+                        <p>128 бит</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Эффективная частота памяти: </p>
+                        <p>17000 МГц</p>
+                    </div>
+                </div>
+                <div class="mini-block">
+                    <p style="margin-bottom: 5px; font-weight: 600;">Заводские настройки</p>
+                    <div class="mini-block-text">
+                        <p>Штатная частота работы видеочипа:</p>
+                        <p>1830 МГц</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Турбочастота:</p>
+                        <p>2460 МГц</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Количество универсальных процессоров (ALU):</p>
+                        <p>3072</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Число текстурных блоков:</p>
+                        <p>96</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Число блоков растеризации:</p>
+                        <p>48</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Поддержка трассировки лучей:</p>
+                        <p>есть</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Аппаратное ускорение трассировки лучей (RT-ядра):</p>
+                        <p>96</p>
+                    </div>
+                    <div class="mini-block-text">
+                        <p>Тензорные ядра:</p>
+                        <p>24</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="assets/js/img-slider-tovar.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+.search{
+    position: relative;
+    width: 1080px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 0 4px #e8e8e8;
+    height: 40px;
+}
+.search__icon{
+    position: absolute;
+}
+.elastic li::before{
+    display: none;
+}
+.elastic li.hide{
+    display: none;
+}
+.elastic li{
+    transition: all ease 0;
+}
