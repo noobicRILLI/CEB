@@ -20,39 +20,39 @@ include("assets/php/function.php");
 </head>
 <body>
 <header>
-        <div class="headdowncont">
-          <div class="headdown">
-            <img
-              src="assets/img/logo.png"
-              alt="logo"
-              class="logo"
-              onclick="location.href='index.php'"
-            />
-            <button class="catalogbut" onclick="location.href='catalog.html'">
-              <span>Каталог</span
-              ><img src="assets/img/catalog.png" alt="catalog" />
-            </button>
-            <div class="search">
-              <input type="text" placeholder="Поиск" />
-              <img src="assets/img/Search.png" alt="searchicon" />
-            </div>
-            <nav class="headbtns">
-              <button type="button" onclick="location.href='user.php'">
-                <img src="assets/img/Profile_Circle-192x192.png" alt="profile" />
-                <span>Профиль</span>
-              </button>
-              <button type="button" onclick="location.href='cart.html'">
-                <img src="assets/img/Shopping_Card-192x192.png" alt="cart" />
-                <span>Корзина</span>
-              </button>
-              <button type="button" onclick="location.href='favorite.html'">
-                <img src="assets/img/Heart-192x192.png" alt="fav" />
-                <span>Избранное</span>
-              </button>
-            </nav>
+      <div class="headdowncont">
+        <div class="headdown">
+          <img
+            src="assets/img/logo.png"
+            alt="logo"
+            class="logo"
+            onclick="location.href='index.php'"
+          />
+          <button class="catalogbut" onclick="location.href='catalog.php'">
+            <span>Каталог</span
+            ><img src="assets/img/catalog.png" alt="catalog" />
+          </button>
+          <div class="search">
+            <input type="text" placeholder="Поиск" />
+            <img src="assets/img/Search.png" alt="searchicon" />
           </div>
+          <nav class="headbtns">
+            <button type="button" onclick="location.href='user.php'">
+              <img src="assets/img/Profile_Circle-192x192.png" alt="profile" />
+              <span>Профиль</span>
+            </button>
+            <button type="button" onclick="location.href='cart.php'">
+              <img src="assets/img/Shopping_Card-192x192.png" alt="cart" />
+              <span>Корзина</span>
+            </button>
+            <button type="button" onclick="location.href='favorite.php'">
+              <img src="assets/img/Heart-192x192.png" alt="fav" />
+              <span>Избранное</span>
+            </button>
+          </nav>
         </div>
-      </header>
+      </div>
+    </header>
     <div class="homepage">
         <div class="homepage__slider">
             <img src="assets/img/index.png" alt="">

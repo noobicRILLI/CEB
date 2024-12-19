@@ -13,39 +13,39 @@
 </head>
 <body>
 <header>
-    <div class="headdowncont">
-      <div class="headdown">
-        <img
-          src="assets/img/logo.png"
-          alt="logo"
-          class="logo"
-          onclick="location.href='index.php'"
-        />
-        <button class="catalogbut" onclick="location.href='catalog.html'">
-          <span>Каталог</span
-          ><img src="assets/img/catalog.png" alt="catalog" />
-        </button>
-        <div class="search">
-          <input type="text" placeholder="Поиск" />
-          <img src="assets/img/Search.png" alt="searchicon" />
+      <div class="headdowncont">
+        <div class="headdown">
+          <img
+            src="assets/img/logo.png"
+            alt="logo"
+            class="logo"
+            onclick="location.href='index.php'"
+          />
+          <button class="catalogbut" onclick="location.href='catalog.php'">
+            <span>Каталог</span
+            ><img src="assets/img/catalog.png" alt="catalog" />
+          </button>
+          <div class="search">
+            <input type="text" placeholder="Поиск" />
+            <img src="assets/img/Search.png" alt="searchicon" />
+          </div>
+          <nav class="headbtns">
+            <button type="button" onclick="location.href='user.php'">
+              <img src="assets/img/Profile_Circle-192x192.png" alt="profile" />
+              <span>Профиль</span>
+            </button>
+            <button type="button" onclick="location.href='cart.php'">
+              <img src="assets/img/Shopping_Card-192x192.png" alt="cart" />
+              <span>Корзина</span>
+            </button>
+            <button type="button" onclick="location.href='favorite.php'">
+              <img src="assets/img/Heart-192x192.png" alt="fav" />
+              <span>Избранное</span>
+            </button>
+          </nav>
         </div>
-        <nav class="headbtns">
-          <button type="button" onclick="location.href='user.php'">
-            <img src="assets/img/Profile_Circle-192x192.png" alt="profile" />
-            <span>Профиль</span>
-          </button>
-          <button type="button" onclick="location.href='cart.html'">
-            <img src="assets/img/Shopping_Card-192x192.png" alt="cart" />
-            <span>Корзина</span>
-          </button>
-          <button type="button" onclick="location.href='favorite.html'">
-            <img src="assets/img/Heart-192x192.png" alt="fav" />
-            <span>Избранное</span>
-          </button>
-        </nav>
       </div>
-    </div>
-  </header>
+    </header>
     <div class="user-page">
         <div class="user-page-txt">
             <p>Личный кабинет</p>
@@ -84,12 +84,12 @@ session_start();
 if (!isset($_SESSION['id_user'])) {
     die("<a style='color:#FF0000;' class='but' href='avtorization.php'>Пожалуйста, войдите в систему.</a>"); // Если не установлен, выводим сообщение
 }
-$user_id = $_SESSION['id_user']; // Получаем идентификатор текущего пользователя
+$id_user = $_SESSION['id_user']; // Получаем идентификатор текущего пользователя
 
 // SQL-запрос для извлечения данных только для текущего пользователя
 $query = "SELECT `id`, `name`, `email` FROM `user` WHERE `id` = ?";
 $stmt = $connect->prepare($query);
-$stmt->bind_param("i", $user_id); // Привязываем параметр
+$stmt->bind_param("i", $id_user); // Привязываем параметр
 $stmt->execute();
 $result = $stmt->get_result();
 
