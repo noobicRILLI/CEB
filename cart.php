@@ -187,6 +187,48 @@ include("assets/php/function.php");
         </div>
     </div>
     </section>
+    <footer>
+  <div class="len">
+  <div class="footer">
+  
+      <div class="pp">
+        <p>Часто задаваемые вопросы</p>
+          <p>Зачем мы это делаем?</p>
+          <p>Что нам это даёт?</p>
+          <p>Как мы живы после ковида?</p>
+          <p>Почему такие дешёвые билеты?</p>
+      </div>
+      <div class="pp">
+          <p>Пользователи</p>
+          <p>О сервисе</p>
+          <p>Служба поддержки</p>
+          <p>Пользовательское соглашение</p>
+          <p>Участие в иследовании</p>
+      </div>
+      <div class="pp">
+          <p>Партёрам</p>
+          <p>Реклама</p>
+          <p>Сотрудничество</p>
+          <p>Деньги</p>
+          <p>Партнёрская программа</p>
+      </div>
+      <div class="pp">
+          <p>Работа</p>
+          <p>Стажировка</p>
+          <p>Деньги</p>
+          <p>Трудоустройство</p>
+          <p>Карьера</p>
+      </div>
+      <div class="soc">
+          <a href="https://vk.com/"><img src="/assets/img/vk.png" alt="vk" /></a>
+          <a href="https://web.telegram.org/"><img src="assets/img/telegram.png" alt="telegram" /></a>
+          <a href="https://youtube.com/"><img src="assets/img/youtube.png" alt="youtube" /></a>
+          <a href="https://tiktok.com/"><img src="assets/img/tiktok.png" alt="tiktok" /></a>
+        </div>
+  </div>
+  <p style="color: #000; text-align: center;">© 2003–2024 MobileAPP - Что вы тут забыли?</p>
+  </div>
+</footer>
     </main>
     
     <script>
