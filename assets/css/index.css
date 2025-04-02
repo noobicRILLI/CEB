@@ -15,16 +15,23 @@ p{
 hr{
     margin: 20px 0;
 }
+
 .best-seller-product button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: #FFF;
     color: rgb(255, 0, 0);
-    border: solid 1px #000;
+
     border-radius: 100%;
-    padding: 15px 25px;
+    padding: 15px 20px;
     cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    transition: all .2s ease, opacity .3s ease;
+    cursor: pointer;
+
+    transform-origin: center;
 }
 .new-product button {
     position: absolute;
@@ -32,17 +39,38 @@ hr{
     transform: translateY(-50%);
     background-color: #FFF;
     color: rgb(255, 0, 0);
-    border: solid 1px #000;
     border-radius: 100%;
-    padding: 15px 25px;
+    padding: 15px 20px;
     cursor: pointer;
+    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    transition: all .2s ease, opacity .3s ease;
+    cursor: pointer;
+
+    transform-origin: center;
 }
+.dl{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+}
+.dl:hover .prev,
+.dl:hover .next{
+    opacity: 1;
+    border: none;
+    transition: all .2s ease, opacity .3s ease;
+}
+    
+
 .prev, .prev2 {
     left: 10px;
+    opacity: 0;
 }
 
 .next, .next2 {
     right: 10px;
+    opacity: 0;
 }
 .homepage{
     width: 1380px;
@@ -55,14 +83,20 @@ hr{
     margin-top: 44px;
     
 }
-.best-seller-product, .new-product{
- width: 1380px;
- background: #fff;
- padding: 25px 10px 25px 25px;
- border-radius: 10px;
- position: relative;
- box-shadow: 0 2px 4px rgba(0, 0, 5);
- overflow: hidden; /* Скрываем все, что выходит за пределы контейнера */
+.best-seller-product, .new-product {
+    width: 100%; /* Занимает 100% ширины родительского контейнера */
+    max-width: 1380px; /* Максимальная ширина остается прежней */
+    background: #fff;
+    padding: 25px 10px 25px 25px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 5);
+    overflow: hidden; /* Скрываем все, что выходит за пределы контейнера */
+    box-sizing: border-box; /* Учитываем отступы и границы в общей ширине */
+    flex-wrap: nowrap;
+}
+.best-seller-product button, .new-product button{
+    border: none;
 }
 .best-seller-tittle, .new-tittle,.news-and-review{
     font-size: 24px;
@@ -73,7 +107,9 @@ hr{
     gap: 35px;
     display: flex;
     transition: transform 0.5s ease;
+    flex-wrap: nowrap;
 }
+
 .product-card{
     min-width: 310px;
     max-width: 310px;
@@ -82,6 +118,9 @@ hr{
     flex-direction: column;
     transition: transform 0.5s ease;
     box-sizing: border-box;
+}
+.product-card button{
+    border: solid 1px #000;
 }
 
 .card-img{
@@ -197,4 +236,66 @@ a img{
     border-radius: 8px;
     padding-left: 16px;
     padding-right: 16px;
+}
+@media (max-width: 1280px) {
+    .homepage {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .dl .next, .prev{
+        display: none;
+    }
+    .best-seller-product, .new-product {
+        padding: 5% 2% 5% 5%;
+    }
+
+    .best-seller-product__card, .new-product__card {
+        gap: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        min-width: 230px;
+    }
+    
+    .best-seller-tittle, .new-tittle, .news-and-review {
+        font-size: 1.5rem;
+    }
+
+    .card-price {
+        font-size: 14px;
+    }
+
+    .card-img img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .best-seller-tittle, .new-tittle, .news-and-review {
+        font-size: 1.2rem;
+    }
+    .best-seller-product__card{
+        gap: 10px;
+    }
+    .product-card {
+        min-width: 170px;
+    }
+    .news-and-review__product {
+        overflow: hidden;
+    }
+    .card-txt {
+        font-size: 14px;
+    }
+
+    .card-price {
+        font-size: 12px;
+    }
+
+    .card-img img {
+        max-width: 100px;
+        max-height: 100px;
+    }
 }

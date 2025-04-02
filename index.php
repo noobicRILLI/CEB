@@ -20,39 +20,63 @@ include("assets/php/function.php");
 </head>
 <body>
 <header>
-      <div class="headdowncont">
-        <div class="headdown">
-          <img
-            src="assets/img/logo.png"
-            alt="logo"
-            class="logo"
-            onclick="location.href='index.php'"
-          />
-          <button class="catalogbut" onclick="location.href='catalog.php'">
-            <span>Каталог</span
-            ><img src="assets/img/catalog.png" alt="catalog" />
-          </button>
-          <div class="search">
-            <input type="text" placeholder="Поиск" />
-            <img src="assets/img/Search.png" alt="searchicon" />
-          </div>
-          <nav class="headbtns">
-            <button type="button" onclick="location.href='user.php'">
-              <img src="assets/img/Profile_Circle-192x192.png" alt="profile" />
-              <span>Профиль</span>
-            </button>
-            <button type="button" onclick="location.href='cart.php'">
-              <img src="assets/img/Shopping_Card-192x192.png" alt="cart" />
-              <span>Корзина</span>
-            </button>
-            <button type="button" onclick="location.href='favorite.php'">
-              <img src="assets/img/Heart-192x192.png" alt="fav" />
-              <span>Избранное</span>
-            </button>
-          </nav>
-        </div>
+  <div class="headdowncont">
+    <div class="headdown">
+      <img
+        src="assets/img/logo.png"
+        alt="logo"
+        class="logo"
+        onclick="location.href='index.php'"
+      />
+      <button class="catalogbut" onclick="location.href='catalog.php'">
+        <span>Каталог</span><img src="assets/img/catalog.png" alt="catalog" />
+      </button>
+      <div class="search">
+        <input type="text" placeholder="Поиск" />
+        <img src="assets/img/Search.png" alt="searchicon" />
       </div>
-    </header>
+      <!-- Бургер-меню для мобильных устройств -->
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="headbtns">
+        <button type="button" onclick="location.href='user.php'">
+          <img src="assets/img/Profile_Circle-192x192.png" alt="profile" />
+          <span>Профиль</span>
+        </button>
+        <button type="button" onclick="location.href='cart.php'">
+          <img src="assets/img/Shopping_Card-192x192.png" alt="cart" />
+          <span>Корзина</span>
+        </button>
+        <button type="button" onclick="location.href='favorite.php'">
+          <img src="assets/img/Heart-192x192.png" alt="fav" />
+          <span>Избранное</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav">
+  <button type="button" onclick="location.href='user.php'">
+    Профиль
+  </button>
+  <button type="button" onclick="location.href='cart.php'">
+    Корзина
+  </button>
+  <button type="button" onclick="location.href='favorite.php'">
+    Избранное
+  </button>
+</nav>
+
+<script>
+    function toggleMenu() {
+  var menu = document.querySelector('.mobile-nav');
+  menu.classList.toggle('active');
+}
+</script>
     <div class="homepage">
         <div class="homepage__slider">
             <img src="assets/img/index.png" alt="">
@@ -61,85 +85,29 @@ include("assets/php/function.php");
             <div class="best-seller-tittle">Хиты продаж</div>
             <hr>
             <div class="best-seller-product">
- 
+                <div class="dl">
                 <?=fnindexall()?>
 
                 <button class="prev" onclick="changeSlide(-1, 'another')">&#10094;</button>
         <button class="next" onclick="changeSlide(1, 'another')">&#10095;</button>
+        </div>
             </div>
         </div>
+
         <div class="homepage__new">
             <div class="new-tittle">Новинки</div>
             <hr>
             <div class="new-product">
-                <div class="new-product__card">
+
+                <div class="dl">
                 <?=fnindexallspin()?>
-                </div>
+                
                 <button class="prev" onclick="changeSlide(-1, 'new')">&#10094;</button>
         <button class="next" onclick="changeSlide(1, 'new')">&#10095;</button>
             </div>
-        </div>
-        <div class="homepage__news-and-review">
-            <div class="news-and-review">Новости и обзоры</div>
-            <hr>
-            <div class="news-and-review__product">
-                <div class="news-product">
-                    <div style="position: relative;">
-                        <div class="news-product__img"><img src="assets/img/news-vidiocard.png" alt=""></div>
-                        <div class="block">
-                            <div class="block-txt">
-                                <p>Intel представила Arc B580 и Arc B570</p>
-                                <p>Настоящие конкуренты RTX 4060 и RX 7600</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-product">
-                    <div style="position: relative;">
-                        <div class="news-product__img-2"><img src="assets/img/news-monitor.png" alt=""></div>
-                        <div class="block-2">
-                            <div class="block-txt">
-                                <p>Ultrawide или несколько мониторов?</p>
-                                <p>Трудности выбора и подводные камни разных вариантов</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-product">
-                    <div style="position: relative;">
-                        <div class="news-product__img"><img src="assets/img/news-vidiocard.png" alt=""></div>
-                        <div class="block">
-                            <div class="block-txt">
-                                <p>Intel представила Arc B580 и Arc B570</p>
-                                <p>Настоящие конкуренты RTX 4060 и RX 7600</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-product">
-                    <div style="position: relative;">
-                        <div class="news-product__img-2"><img src="assets/img/news-monitor.png" alt=""></div>
-                        <div class="block-2">
-                            <div class="block-txt">
-                                <p>Ultrawide или несколько мониторов?</p>
-                                <p>Трудности выбора и подводные камни разных вариантов</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-product">
-                    <div style="position: relative;">
-                        <div class="news-product__img"><img src="assets/img/news-vidiocard.png" alt=""></div>
-                        <div class="block">
-                            <div class="block-txt">
-                                <p>Intel представила Arc B580 и Arc B570</p>
-                                <p>Настоящие конкуренты RTX 4060 и RX 7600</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+        
     </div>
     <footer>
   <div class="len">
