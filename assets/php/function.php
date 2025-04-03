@@ -136,7 +136,7 @@ function fncatalogin($typeId) {
                 <div class="product-card">
                     <div class="card-img"> <a href=""><img src="%s" alt=""></a></div>
                     <div class="product-card__right">
-                        <div>
+                        <div class="help">
                             <div class="card-txt">%s</div>
                             <div class="card-txt">
                                 <p>%s<br></p>

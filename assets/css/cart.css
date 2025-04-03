@@ -9,6 +9,7 @@ margin-top: 1%;
     display: flex;
     width: 1300px;
     gap:5%;
+    flex-wrap: wrap;
 }
 .cartcont{
     display: flex;
@@ -348,3 +349,5 @@ font-size: 21px;
     resize: none;
     outline:none;
 }
+
+
