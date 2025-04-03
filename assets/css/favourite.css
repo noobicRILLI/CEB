@@ -41,7 +41,7 @@ hr{
     margin-top: 20px;
 }
 .product-page{
-    width: 1380px;
+    max-width: 1380px;
     margin: auto;
 }
 
