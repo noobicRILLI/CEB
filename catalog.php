@@ -229,5 +229,26 @@ for (i = 0; i < coll.length; i++) {
 }
 
         </script>
+        <script>
+    window.addEventListener('scroll', function() {
+  const block = document.querySelector('.product-page__left');
+  const scrollPosition = window.scrollY; // Получаем текущую позицию прокрутки
+  const maxScroll = 160; // Максимальное расстояние, на которое блок должен сдвигаться вверх
+  const startPosition = 168; // Исходное положение блока
+
+  // Если прокрутка меньше максимального значения, сдвигаем блок
+  if (scrollPosition < maxScroll) {
+    block.style.top = startPosition - scrollPosition + 'px';
+  } else {
+    block.style.top = startPosition - maxScroll + 'px'; // Ограничиваем сдвиг до maxScroll
+  }
+
+  // Если прокрутка возвращается, блок будет плавно возвращаться в исходное положение
+  if (scrollPosition === 0) {
+    block.style.top = startPosition + 'px'; // Когда прокрутка на самом верху, блок возвращается в исходное положение
+  }
+});
+
+</script>
 </body>
 </html>
